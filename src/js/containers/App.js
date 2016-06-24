@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './Header'
+import Header from '../components/Header'
 
-export default class App extends React.Component {
+class App extends React.Component {
 
   render() {
     const isAuth = typeof window.localStorage['accessToken'] !== 'undefined';
@@ -16,6 +16,8 @@ export default class App extends React.Component {
     );
   }
 }
+
+export default App;
 
 
 
