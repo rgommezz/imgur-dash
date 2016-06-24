@@ -1,0 +1,46 @@
+@import 'variables';
+
+html {
+  font-size: 62.5%; // to set the base font-size to 10px and make easy calculations using rem units
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: $base_line_height;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  font-size: $size_30pt;
+}
+
+h2 {
+  font-size: $size_24pt;
+}
+
+h3 {
+  font-size: $size_20pt;
+}
+
+h4 {
+  font-size: $size_16pt;
+}
+
+p, span {
+  font-size: $size_14pt;
+}
+
+a {
+  font-size: $size_14pt;
+  text-decoration: none;
+}
+
+#main {
+  position: absolute;
+  top: $header_height;
+  min-height: calc(100vh - #{$header_height});
+  min-width: 100%;
+  background-color: $teal_light;
+  padding: $header_padding;
+}

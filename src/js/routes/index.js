@@ -1,6 +1,7 @@
 import React from 'react'
-import { Route } from 'react-router'
+import { Route, IndexRoute } from 'react-router'
 import App from '../components/App'
+import ImageDashboard from '../components/ImageDashboard'
 import { authURL } from '../constants'
 
 /**
@@ -29,6 +30,6 @@ function checkAccessToken(nextState, replace) {
 
 export default (
   <Route path="/" component={App} onEnter={checkAccessToken} >
-
+   <IndexRoute component={ImageDashboard} />
   </Route>
 )

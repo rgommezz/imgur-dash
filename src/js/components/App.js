@@ -1,13 +1,24 @@
 import React from 'react';
+import Header from './Header'
 
-const App = React.createClass({
+export default class App extends React.Component {
+
   render() {
     const isAuth = typeof window.localStorage['accessToken'] !== 'undefined';
+    
     return (
-      <h1>{!isAuth ? 'Authenticating...' : 'Welcome to instaDash!'}</h1>
+      <div>
+        <Header title="InstaDash" />
+        <div id="main">
+          {React.cloneElement(this.props.children, {isAuth: isAuth})}
+        </div>
+      </div>
     );
   }
-});
+}
 
-export default App;
+
+
+
+
 
