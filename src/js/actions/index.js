@@ -14,9 +14,9 @@ export const fetchTopicsFailure = (error) => ({
   error: error
 });
 
-export const fetchMediaByTopicRequest = (topicIds) => ({
+export const fetchMediaByTopicRequest = (topicId) => ({
   type: ActionTypes.FETCH_MEDIA_BY_TOPIC_REQUEST,
-  topicIds: topicIds
+  topicId: topicId
 });
 
 export const fetchMediaByTopicSuccess = (media) => ({

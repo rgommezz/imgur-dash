@@ -1,0 +1,40 @@
+.media-container {
+  text-align: center;
+}
+
+.preview {
+  display: inline-block;
+  position: relative;
+  animation: fadein .65s ease-out;
+
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100%{
+      opacity: 1.0;
+    }
+  }
+
+  .preview__image {
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+  }
+
+  .preview__video {
+    height: 200px;
+    width: 200px;
+    background-color: black;
+  }
+
+  .preview--hover {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    opacity: .7;
+  }
+}

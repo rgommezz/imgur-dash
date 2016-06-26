@@ -15,9 +15,9 @@ export function *fetchTopics() {
 
 export function *fetchMediaByTopic(action) {
   try {
-    // concurrently querying media by topic
-    const sideEffectsArr = action.topicIds.map(id => call(api.fetchMediaByTopic, id));
-    const [media1, media2, media3, media4, media5] = yield sideEffectsArr;
+    // querying media by topic
+    const { data } = yield call(api.fetchMediaByTopic, action.topicId);
+    yield put({type: ActionTypes.FETCH_MEDIA_BY_TOPIC_SUCCESS, media: data});
   } catch(error) {
     yield put({type: ActionTypes.FETCH_MEDIA_BY_TOPIC_FAILURE, message: error.message})
   }

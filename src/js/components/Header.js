@@ -3,7 +3,6 @@ import { Link } from 'react-router';
 
 function isTopicActive(id, pathname) {
   const urlTopicId = pathname.split('/')[2];
-  console.log(urlTopicId, id);
   return urlTopicId == id;
 }
 
