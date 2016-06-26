@@ -1,21 +1,42 @@
 import React from 'react';
+import { connect } from 'react-redux'
 import Header from '../components/Header'
+import { fetchTopicsRequest } from '../actions'
+import { getTopicNames } from '../reducers'
+
 
 class App extends React.Component {
 
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    this.props.fetchTopicsRequest();
+  }
+
   render() {
-    const isAuth = typeof window.localStorage['accessToken'] !== 'undefined';
-    
     return (
-      <div>
-        <Header title="InstaDash" />
+      <div id="app-container">
+        <Header title="ImgurDash" topics={this.props.list} />
         <div id="main">
-          {React.cloneElement(this.props.children, {isAuth: isAuth})}
+          {this.props.children}
         </div>
       </div>
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    list: getTopicNames(state)
+  };
+};
+
+App = connect(
+  mapStateToProps,
+  { fetchTopicsRequest }
+)(App);
 
 export default App;
 

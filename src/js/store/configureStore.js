@@ -2,7 +2,7 @@ import { createStore, applyMiddleware } from 'redux'
 import createLogger from 'redux-logger'
 import createSagaMiddleware from 'redux-saga'
 import rootReducer from '../reducers'
-import { helloSaga } from '../sagas'
+import rootSaga from '../sagas'
 
 export default function configureStore() {
   const sagaMiddleware = createSagaMiddleware();
@@ -22,7 +22,7 @@ export default function configureStore() {
     })
   }
 
-  sagaMiddleware.run(helloSaga);
+  sagaMiddleware.run(rootSaga);
 
   return store;
 }

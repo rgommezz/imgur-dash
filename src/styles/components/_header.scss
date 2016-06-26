@@ -4,17 +4,24 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  position: fixed;
-  left: 0;
-  z-index: 1;
+  justify-content: space-between;
   height: $header_height;
   width: 100%;
   background-color: $teal_medium;
   color: white;
   padding: $header_padding;
-  box-shadow: $box_shadow;
 
   .header__title {
     font-size: $size_24pt;
+  }
+
+  .header__topics {
+    list-style-type: none;
+
+    li {
+      font-size: $size_16pt;
+      display: inline-block;
+      margin: 0 10px;
+    }
   }
 }

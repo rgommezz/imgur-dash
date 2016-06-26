@@ -1,5 +1,16 @@
-const CLIENT_ID = '7c522207e67847a88ef9628b9bee6b8e';
-const redirectURI = 'http://localhost:3000';
-export const authURL = `https://api.instagram.com/oauth/authorize/?client_id=${CLIENT_ID}&redirect_uri=${redirectURI}&response_type=token`;
-export const baseInstagramApiURL = 'https://api.instagram.com/v1';
+const rootUrl = 'https://api.imgur.com/3';
+
+export const endPoints = {
+  topics: `${rootUrl}/topics/defaults`,
+  mediaByTopic: (id) => `${rootUrl}/topics/${id}`
+};
+
+export const ActionTypes = {
+  FETCH_TOPICS_REQUEST: 'FETCH_TOPICS_REQUEST',
+  FETCH_TOPICS_SUCCESS: 'FETCH_TOPICS_SUCCESS',
+  FETCH_TOPICS_FAILURE: 'FETCH_TOPICS_FAILURE',
+  FETCH_MEDIA_BY_TOPIC_REQUEST: 'FETCH_MEDIA_BY_TOPIC_REQUEST',
+  FETCH_MEDIA_BY_TOPIC_SUCCESS: 'FETCH_MEDIA_BY_TOPIC_SUCCESS',
+  FETCH_MEDIA_BY_TOPIC_FAILURE: 'FETCH_MEDIA_BY_TOPIC_FAILURE'
+};
 

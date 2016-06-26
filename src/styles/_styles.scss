@@ -36,11 +36,12 @@ a {
   text-decoration: none;
 }
 
+#app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 #main {
-  position: absolute;
-  top: $header_height;
+  position: relative;
   min-height: calc(100vh - #{$header_height});
-  min-width: 100%;
-  background-color: $teal_light;
   padding: $header_padding;
 }
