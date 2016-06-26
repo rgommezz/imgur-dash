@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import Header from '../components/Header'
 import { fetchTopicsRequest } from '../actions'
-import { getTopicNames } from '../reducers'
+import { getTopicsBasicInfo } from '../reducers'
 
 
 class App extends React.Component {
@@ -18,7 +18,7 @@ class App extends React.Component {
   render() {
     return (
       <div id="app-container">
-        <Header title="ImgurDash" topics={this.props.list} />
+        <Header title="ImgurDash" topics={this.props.list} location={this.props.location} />
         <div id="main">
           {this.props.children}
         </div>
@@ -29,7 +29,7 @@ class App extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    list: getTopicNames(state)
+    list: getTopicsBasicInfo(state)
   };
 };
 

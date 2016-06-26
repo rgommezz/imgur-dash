@@ -1,0 +1,22 @@
+@import '../variables';
+
+.topic-list {
+
+  .topic-list__item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: white;
+    border: 1px solid $light_grey;
+    color: $teal_strong;
+
+    .item__title {
+      margin: 10px 0;
+    }
+
+    .item__description {
+      margin-bottom: 10px;
+    }
+  }
+}

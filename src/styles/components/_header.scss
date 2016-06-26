@@ -3,25 +3,39 @@
 .header {
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
   justify-content: space-between;
   height: $header_height;
   width: 100%;
   background-color: $teal_medium;
   color: white;
-  padding: $header_padding;
+  padding: 0 $header_padding;
 
   .header__title {
+    align-self: center;
     font-size: $size_24pt;
   }
 
   .header__topics {
+    display: flex;
     list-style-type: none;
 
-    li {
+    .topics__topic {
+      padding: 20px 5px 0 5px;
+      color: white;
       font-size: $size_16pt;
       display: inline-block;
       margin: 0 10px;
+
+      &:hover {
+        background-color: $teal_300;
+        color: $teal_strong;
+      }
+
+      &--active {
+        @extend .topics__topic;
+        background-color: $teal_light;
+        color: $teal_strong;
+      }
     }
   }
 }

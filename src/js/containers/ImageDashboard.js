@@ -13,8 +13,7 @@ class ImageDashboard extends React.Component {
     // Fetching images by topic
     const { topicIds, fetchMediaByTopicRequest } = this.props;
     if(topicIds.length) {
-      console.log(topicIds);
-      fetchMediaByTopicRequest(topicIds);
+      fetchMediaByTopicRequest(topicIds)
     }
   }
 
