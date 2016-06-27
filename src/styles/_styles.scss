@@ -47,3 +47,11 @@ a {
   min-height: calc(100vh - #{$header_height});
   padding: $header_padding;
 }
+
+// Overrides
+.sk-wave {
+  .sk-rect {
+    margin: 0 2px;
+    background-color: $teal_medium;
+  }
+}

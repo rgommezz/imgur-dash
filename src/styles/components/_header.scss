@@ -2,28 +2,62 @@
 
 .header {
   display: flex;
-  flex-flow: row nowrap;
   justify-content: space-between;
   height: $header_height;
   width: 100%;
   background-color: $teal_medium;
   padding: 0 $header_padding;
 
+  @media (max-width: $screen_medium) {
+    flex-direction: column;
+    height: calc(#{$header_height} * 2);
+  }
+
+  @media (max-width: $screen_small) {
+    flex-direction: column;
+    height: calc(#{$header_height} * 4.5);
+  }
+
   .header__title {
     color: white;
     align-self: center;
     font-size: $size_24pt;
+
+    @media (max-width: $screen_medium) and (min-width: $screen_small) {
+      padding-top: 15px;
+      flex: 1 1 50%;
+      align-self: flex-start;
+    }
+
+    @media (max-width: $screen_small) {
+      padding-top: 10px;
+    }
   }
 
   .header__topics {
     display: flex;
     list-style-type: none;
 
+    @media (max-width: $screen_medium) and (min-width: $screen_small) {
+      flex: 1 1 50%;
+      align-self: flex-start;
+      margin-left: -10px;
+    }
+
+    @media (max-width: $screen_small) {
+      flex-direction: column;
+    }
+
     .topics__topic {
       padding: 20px 10px 0 10px;
       color: white;
       font-size: $size_16pt;
       display: inline-block;
+
+      @media (max-width: $screen_small) {
+        padding: 10px 0 10px 16px;
+        margin: 0 -15px;
+      }
 
       &:hover {
         background-color: $teal_300;

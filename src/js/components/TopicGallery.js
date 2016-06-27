@@ -1,10 +1,19 @@
 import React from 'react'
-import ImagePreview from '../components/ImagePreview'
+import ImagePreview from './ImagePreview'
+import Spinner from './Spinner'
+
+function renderContent (media) {
+  if (media.length) {
+    return media.map(item => <ImagePreview key={item.id} {...item} />);
+  } else {
+    return <Spinner />
+  }
+}
 
 const TopicGallery = ({media}) => {
   return (
     <div className="media-container">
-      {media.map(item => <ImagePreview key={item.id} {...item} />)}
+      {renderContent(media)}
     </div>
   );
 };
