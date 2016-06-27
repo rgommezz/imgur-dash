@@ -42,7 +42,7 @@ class ImageDetail extends React.Component {
           <div className="panel__footer">
             <h4>{this.props.image.description}</h4>
           </div>
-          <h3 className="comments__header">Comments</h3>
+          <h3 className="comments__header">Comments:</h3>
           {this.renderComments()}
         </div>
       )
