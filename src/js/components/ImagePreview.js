@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router'
+const playIcon = require('../../assets/ic_play_arrow_black_24dp.png');
 
 class ImagePreview extends React.Component {
   constructor(props) {
@@ -43,6 +44,10 @@ class ImagePreview extends React.Component {
     )
   }
 
+  icon(){
+    return <img className="glyphicon glyphicon-play" src={playIcon} />
+  }
+
   render() {
     return (
       <Link
@@ -51,6 +56,7 @@ class ImagePreview extends React.Component {
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}>
         {this.props.animated && this.state.hovering ? this.video() : this.image()}
+        {this.props.animated && !this.state.hovering ? this.icon() : null}
         {this.state.hovering ? this.inset() : null}
       </Link>
     );

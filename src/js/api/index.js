@@ -1,11 +1,11 @@
 import 'whatwg-fetch'
 import {endPoints} from '../constants'
-import { apiKey } from '../secrets'
+import { clientId } from '../secrets'
 
 export default function callApi(endPoint) {
   return fetch(endPoint, {
     headers: {
-      'Authorization': 'Client-ID ' + apiKey
+      'Authorization': 'Client-ID ' + clientId
     }
   })
   .then(response =>

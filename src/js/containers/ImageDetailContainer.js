@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { fetchMediaDetailsRequest } from '../actions'
+import { fetchMediaDetailsRequest, cleanImageDetails } from '../actions'
 import { getMediaDetails, getComments } from '../reducers'
 import ImageDetail from '../components/ImageDetail'
 
@@ -11,6 +11,10 @@ class ImageDetailContainer extends React.Component {
 
   componentDidMount() {
     this.props.fetchMediaDetailsRequest(this.props.params.id);
+  }
+
+  componentWillUnmount() {
+    this.props.cleanImageDetails();
   }
 
   render() {
@@ -29,7 +33,7 @@ const mapStateToProps = (state) => {
 
 ImageDetailContainer = connect(
   mapStateToProps,
-  { fetchMediaDetailsRequest }
+  { fetchMediaDetailsRequest, cleanImageDetails }
 )(ImageDetailContainer);
 
 export default ImageDetailContainer;

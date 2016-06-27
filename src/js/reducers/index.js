@@ -32,6 +32,10 @@ const rootReducer = (state = initialState, action) => {
     case ActionTypes.FETCH_MEDIA_COMMENTS_SUCCESS:
       // For simplicity we are not taking into account nested comments
       return {...state, ...{comments: action.comments}};
+    case ActionTypes.CLEAN_GALLERY:
+      return {...state, ...{media: []}};
+    case ActionTypes.CLEAN_IMAGE_DETAILS:
+      return {...state, ...{mediaDetails: {}, comments: []}};
     default:
       return state;
   }

@@ -54,3 +54,10 @@ export const fetchMediaCommentsFailure = (error) => ({
   error: error
 });
 
+export const cleanGallery = () => ({
+  type: ActionTypes.CLEAN_GALLERY
+});
+
+export const cleanImageDetails = () => ({
+  type: ActionTypes.CLEAN_IMAGE_DETAILS
+});

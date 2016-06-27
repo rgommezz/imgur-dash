@@ -20,11 +20,10 @@
     list-style-type: none;
 
     .topics__topic {
-      padding: 20px 5px 0 5px;
+      padding: 20px 10px 0 10px;
       color: white;
       font-size: $size_16pt;
       display: inline-block;
-      margin: 0 10px;
 
       &:hover {
         background-color: $teal_300;

@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchMediaByTopicRequest } from '../actions'
+import { fetchMediaByTopicRequest, cleanGallery } from '../actions'
 import { getTopicIds, getMediaByTopic } from '../reducers'
 import TopicGallery from '../components/TopicGallery'
 
@@ -21,6 +21,10 @@ class TopicGalleryContainer extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    this.props.cleanGallery();
+  }
+  
   render() {
     return (
       <TopicGallery media={this.props.media} />
@@ -47,7 +51,7 @@ TopicGalleryContainer.defaultProps = {
 
 TopicGalleryContainer = connect(
   mapStateToProps,
-  { fetchMediaByTopicRequest }
+  { fetchMediaByTopicRequest, cleanGallery }
 )(TopicGalleryContainer);
 
 export default TopicGalleryContainer;

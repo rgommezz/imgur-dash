@@ -1,8 +1,8 @@
 .panel {
   margin-bottom: 20px;
+  padding-bottom: 20px;
   background-color: #fff;
   border: 1px solid #ddd;
-  padding-bottom: 20px;
 
   .panel__header {
     color: #333;
@@ -34,12 +34,13 @@
 
   .comments__body {
     list-style-type: none;
+    padding: 0 16px;
   }
 
   .comments__box {
     position: relative;
     display: block;
-    padding: 10px 15px;
+    padding: 10px 16px;
     margin-bottom: -1px;
     background-color: #fff;
     border: 1px solid #ddd;

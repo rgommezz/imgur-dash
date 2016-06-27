@@ -30,6 +30,9 @@ module.exports = {
       test: /\.scss$/,
       loaders: ["style", "css?sourceMap", "postcss", "sass?sourceMap"],
       include: path.join(__dirname, 'src/styles')
+    }, {
+      test: /\.png?g$/,
+      loader: "file-loader?name=img/img-[hash:6].[ext]"
     }]
   },
   postcss: function () {
