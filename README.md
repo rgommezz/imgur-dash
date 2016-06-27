@@ -1,4 +1,4 @@
-InstaDash
+ImgurDash
 =========
 
 ### Usage
