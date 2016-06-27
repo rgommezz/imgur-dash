@@ -14,7 +14,7 @@ class TopicGalleryContainer extends React.Component {
     this.props.fetchMediaByTopicRequest(this.props.params.id);
   }
 
-  componentWillReceiveProps(nextProps, nextContext) {
+  componentWillReceiveProps(nextProps) {
     // Changing topic, querying media for the new one selected
     if (this.props.params.id !== nextProps.params.id) {
       this.props.fetchMediaByTopicRequest(nextProps.params.id);

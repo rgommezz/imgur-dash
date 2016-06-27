@@ -10,10 +10,9 @@ class TopicList extends React.Component {
   }
 
   renderTopics() {
-    console.log(this.props);
     const { topics } = this.props;
     return topics.map(topic => {
-      return <Link key={topic.id} to={`/topic/${topic.id}`} className="topic-list__item">
+      return <Link key={topic.id} to={`/topics/${topic.id}`} className="topic-list__item">
           <h3 className="item__title">{topic.name}</h3>
           <p className="item__description">{topic.description}</p>
         </Link>

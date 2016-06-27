@@ -46,7 +46,7 @@ class ImagePreview extends React.Component {
   render() {
     return (
       <Link
-        to={`images/${this.props.id}`}
+        to={`/images/${this.props.id}`}
         className="preview"
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}>

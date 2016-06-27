@@ -7,10 +7,10 @@
   height: $header_height;
   width: 100%;
   background-color: $teal_medium;
-  color: white;
   padding: 0 $header_padding;
 
   .header__title {
+    color: white;
     align-self: center;
     font-size: $size_24pt;
   }

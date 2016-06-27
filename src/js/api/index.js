@@ -21,7 +21,8 @@ export default function callApi(endPoint) {
 
 export const fetchDefaultTopics = () => callApi(endPoints.topics);
 
-export const fetchMediaByTopic = (id) => {
-  console.log('id is: ' + endPoints.mediaByTopic(id));
-  return callApi(endPoints.mediaByTopic(id));
-};
+export const fetchMediaByTopic = (id) => callApi(endPoints.mediaByTopic(id));
+
+export const fetchMediaDetails = (id) => callApi(endPoints.mediaDetails(id));
+
+export const fetchMediaComments = (id) => callApi(endPoints.mediaComments(id));
