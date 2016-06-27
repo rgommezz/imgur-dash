@@ -16,6 +16,7 @@
   @media (max-width: $screen_small) {
     flex-direction: column;
     height: calc(#{$header_height} * 4.5);
+    box-shadow: $box_shadow;
   }
 
   .header__title {
@@ -56,7 +57,7 @@
 
       @media (max-width: $screen_small) {
         padding: 10px 0 10px 16px;
-        margin: 0 -15px;
+        margin: 0 -16px;
       }
 
       &:hover {
